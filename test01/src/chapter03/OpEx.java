@@ -15,8 +15,8 @@ public class OpEx {
 //		나눗셈 후 몫을 구함. (정수와 정수를 나누면 결과도 정수로 나옴.)
 //		System.out.println(num1 % num2); // 나눗셈 후 나머지를 구함.
 		
-//		int result = num1++; // num1을 result에 대입한 후에, num1+1. num--도 마찬가지.
-//		int result = ++num1; // num1+1를 한 후에 result에 대입. --num도 마찬가지.
+//		int result = num1++; // num1을 result에 대입한 후에, num1+1. num--도 마찬가지.(전위연산자)
+//		int result = ++num1; // num1+1를 한 후에 result에 대입. --num도 마찬가지. (후위연산자)
 		
 //		System.out.println(num1);
 //		System.out.println(result);

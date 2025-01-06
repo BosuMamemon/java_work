@@ -20,6 +20,7 @@ public class OpEx04 {
 		int a = 5;
 		int b = 4;
 		
+//		비트끼리 &, |, ^ 연산을 하는 연산자들.
 		System.out.println(a&b);
 		System.out.println(a|b);
 		System.out.println(a^b); // 배타적 or(exclusive or) -> 두 비트가 서로 다를 때만 1.
