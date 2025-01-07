@@ -23,32 +23,42 @@ public class Ex01 {
 		System.out.println("지불하실 화폐 권종을 출력하는 프로그램입니다.");
 		System.out.println("지불하실 금액을 최소 100000 이상의 정수로 입력해주십시오.");
 		System.out.println("프로그램 종료를 원하시면 '종료'라고 입력해주십시오.\n");
-		String input = sc.next();
 		
-		while(!input.equals("종료")) {
-			int num = Integer.parseInt(input, 10);
+		while(true) {
+			System.out.println("입력 = ");
+			String input = sc.next();
 			
-			while(num < 100000) {
-				System.out.println("잘못 입력하셨습니다. 다시 입력해주십시오.\n");
-				input = sc.next();
-				num = Integer.parseInt(input, 10);
+			if(input.equals("종료")) {
+				break;
 			}
-				
-			int cash = num;
-			int quotient = 0;
-			int remainder = 0;
 			
-			System.out.println();
-			for(int i = 0; i < denom.length; i ++) {
-				quotient = cash / denom[i];
-				remainder = cash % denom[i];
-				cash = remainder;
+			try {
+				int num = Integer.parseInt(input, 10);
 				
-				System.out.println(denom[i] + "원권 [ " + quotient + " ]매");
-			}
-			System.out.println("\n또다른 금액을 입력하시거나, '종료'를 입력해주십시오.\n");
-			input = sc.next();
-		} 
+				while(!(num >= 100000)) {
+					System.out.println("\n값은 최소 100000 이상의 정수여야 합니다.");
+					System.out.println("입력 = ");
+					input = sc.next();
+					num = Integer.parseInt(input, 10);
+				}
+					
+				int cash = num;
+				int quotient = 0;
+				int remainder = 0;
+				
+				System.out.println();
+				for(int i = 0; i < denom.length; i ++) {
+					quotient = cash / denom[i];
+					remainder = cash % denom[i];
+					cash = remainder;
+					
+					System.out.println(denom[i] + "원권 [ " + quotient + " ]매");
+				}
+				System.out.println("\n또다른 금액을 입력하시거나, '종료'를 입력해주십시오.\n");	
+			} catch(NumberFormatException e) {
+				System.out.println("\n입력값은 정수여야만 합니다.");
+			} finally {}
+		}
 		
 		System.out.println("\n프로그램이 종료됩니다.");
 		sc.close();
