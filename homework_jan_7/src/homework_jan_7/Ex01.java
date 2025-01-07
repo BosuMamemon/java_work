@@ -20,9 +20,10 @@ public class Ex01 {
 		
 		Scanner sc = new Scanner(System.in);
 		int[] denom = makeArray();
+		
 		System.out.println("지불하실 화폐 권종을 출력하는 프로그램입니다.");
 		System.out.println("지불하실 금액을 최소 100000 이상의 정수로 입력해주십시오.");
-		System.out.println("프로그램 종료를 원하시면 '종료'라고 입력해주십시오.\n");
+		System.out.println("입력 종료를 원하시면 '종료'라고 입력해주십시오.\n");
 		
 		while(true) {
 			System.out.println("입력 = ");
@@ -36,23 +37,19 @@ public class Ex01 {
 				int num = Integer.parseInt(input, 10);
 				
 				while(!(num >= 100000)) {
-					System.out.println("\n값은 최소 100000 이상의 정수여야 합니다.");
+					System.out.println("\n값은 최소 100000 이상이어야 합니다.");
 					System.out.println("입력 = ");
 					input = sc.next();
 					num = Integer.parseInt(input, 10);
 				}
 					
-				int cash = num;
-				int quotient = 0;
-				int remainder = 0;
+				int bucks = 0;
 				
 				System.out.println();
 				for(int i = 0; i < denom.length; i ++) {
-					quotient = cash / denom[i];
-					remainder = cash % denom[i];
-					cash = remainder;
-					
-					System.out.println(denom[i] + "원권 [ " + quotient + " ]매");
+					bucks = num / denom[i];
+					num = num % denom[i];
+					System.out.println(denom[i] + "원권 [ " + bucks + " ]매");
 				}
 				System.out.println("\n또다른 금액을 입력하시거나, '종료'를 입력해주십시오.\n");	
 			} catch(NumberFormatException e) {
@@ -60,7 +57,7 @@ public class Ex01 {
 			} finally {}
 		}
 		
-		System.out.println("\n프로그램이 종료됩니다.");
+		System.out.println("\n입력을 종료합니다.");
 		sc.close();
 	}
 
