@@ -46,7 +46,7 @@ public class Ex01 {
 				int bucks = 0;
 				
 				System.out.println();
-				for(int i = 0; i < denom.length; i ++) {
+				for(int i = 0; i < denom.length; i++) {
 					bucks = num / denom[i];
 					num = num % denom[i];
 					System.out.println(denom[i] + "원권 [ " + bucks + " ]매");
