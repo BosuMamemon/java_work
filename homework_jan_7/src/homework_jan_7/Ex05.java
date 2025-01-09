@@ -16,27 +16,34 @@ public class Ex05 {
 		System.out.println("'종료'를 입력하면 입력이 종료됩니다.");
 		System.out.println("<< 입력 >>");
 		
-		int k=0;
-		while(true) {
 
-			int num = (int)(Math.random() * 100) + 1;
-			if((num % 3) == 0) {
-				for(int i = 0; i < arr.length;) {
-					if(arr[i]==num)
-						continue;
-					else {
-						arr[k++]=num;
-						break;
+		while (true) { 
+			int k = 0;
+			while(true) {
+				int num = (int)(Math.random() * 100) + 1;
+				if((num % 3) == 0) {
+					boolean what = false;
+					for(int i = 0; i < k; i++) {
+						if(arr[i] == num)
+							what = true;
+							continue;
+						else {
+							arr[k++] = num;
+							break;
+						}
 					}
-						
+					if(!what) {
+						arr[k++] = num;
+					}
 				}
+				if(k >= arr.length)
+					break;
 			}
-			if(k>=arr.length)
-				break;
+			for(int i: arr) {
+				System.out.println(i);
+			}
 		}
-		for(int i: arr) {
-			System.out.println(i);
-		}
+
 		
 		System.out.println("\n입력을 종료합니다.");
 		sc.close();
