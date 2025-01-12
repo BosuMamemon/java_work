@@ -24,21 +24,23 @@ public class Ex05 {
 			}
 			
 			System.out.print("랜덤 배열 arr = \n{ ");
-//			이전 주소랑 지금 주소가 중복되는지를 검사를 못해 얘가
-//			어떡하지?
-//			죽여버리고 싶다
 			for(int i = 0; i < arr.length;) {
 				int num = (int)(Math.random() * 100) + 1;
-				if(arr[i] == num) {
-					continue;
-				}
-				else {
-					if(num % 3 == 0) {
-						arr[i] = num;
-						System.out.print(arr[i] + " ");
+				for(int j = 0; j < arr.length; j++) {	
+					if(arr[j] == num) {
+						break;
+					}
+					else {
+						if(num % 3 == 0) {
+							arr[i] = num;
+							System.out.print(arr[i] + " ");
+							i++;
+							break;
+						} else {
+							break;
+						}
 					}
 				}
-				i++;
 			}
 
 			System.out.println("}");
