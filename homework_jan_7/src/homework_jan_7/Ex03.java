@@ -12,12 +12,14 @@ public class Ex03 {
 //		 ~
 //		9 | 9 18 27 36 45 54 63 72 81
 		
-		System.out.println("  | 1 2 3 4 5 6 7 8 9");
-		System.out.println("--+---------------------------");
-		for(int i = 1; i < 10; i ++) {
-			System.out.print(i + " | ");
+		System.out.println("   |  1  2  3  4  5  6  7  8  9");
+		System.out.println("---+----------------------------");
+		for(int i = 1; i < 10; i++) {
+			System.out.printf("%2d%2s",i , "|");
 			for(int j = 1; j < 10; j ++) {
-				System.out.print((i * j)+" ");
+				System.out.printf("%3d", i * j);
+//					%d <- 실수 형식으로 출력
+//					%3d <- 실수 형식인데 폭 3으로 출력
 			}
 			System.out.println();
 		}

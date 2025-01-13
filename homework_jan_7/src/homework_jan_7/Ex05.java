@@ -1,5 +1,6 @@
 package homework_jan_7;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ex05 {
@@ -23,27 +24,28 @@ public class Ex05 {
 				break;
 			}
 			
-			System.out.print("랜덤 배열 arr = \n{ ");
+			boolean dup = false;
 			for(int i = 0; i < arr.length;) {
 				int num = (int)(Math.random() * 100) + 1;
+				
 				for(int j = 0; j < arr.length; j++) {	
 					if(arr[j] == num) {
-						break;
+						dup = true;
 					}
-					else {
-						if(num % 3 == 0) {
-							arr[i] = num;
-							System.out.print(arr[i] + " ");
-							i++;
-							break;
-						} else {
-							break;
-						}
-					}
+				}
+				
+				if(dup) {
+					i = 0;
+					dup = false;
+				} else {
+					if(num % 3 == 0) {
+						arr[i] = num;
+						i++;
+					}	
 				}
 			}
 
-			System.out.println("}");
+			System.out.println(Arrays.toString(arr));
 			System.out.println("\n아무 입력을 하면 새로운 배열을 생성합니다.");
 			System.out.println("'종료'를 입력하면 입력이 종료됩니다.");
 			input = sc.nextLine();
