@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Problem06 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("계절을 알아볼 달을 숫자로만 입력해주세요.");

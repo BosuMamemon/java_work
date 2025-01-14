@@ -3,7 +3,6 @@ package chapter02;
 public class DoubleEx1 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		double dnum1 = 3.14;
 		float fnum = 3.14F; // float 타입은 뒤에 식별자 F를 적어줘야 인식함.

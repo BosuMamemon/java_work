@@ -3,7 +3,6 @@ package chapter03;
 public class OpEx03 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		int num = 10;
 		int i = 2;

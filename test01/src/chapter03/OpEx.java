@@ -3,8 +3,6 @@ package chapter03;
 public class OpEx {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
 		int num1 = 10;
 		double num2 = 3.0; // 항 하나가 실수면 결과도 실수로 묵시적 형 변환이 됨. 
 		

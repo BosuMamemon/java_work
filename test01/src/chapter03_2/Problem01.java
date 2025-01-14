@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Problem01 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("점수 2개를 입력하세요.");

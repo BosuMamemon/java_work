@@ -3,7 +3,6 @@ package chapter03_5;
 public class ArrayTest05 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		int num[] = {1, 2, 3, 4, 5};
 		int sum = 0;

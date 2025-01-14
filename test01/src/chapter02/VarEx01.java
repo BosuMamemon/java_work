@@ -3,7 +3,6 @@ package chapter02;
 public class VarEx01 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		var num = 10;
 		var dnum = 10.0;

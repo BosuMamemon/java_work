@@ -3,7 +3,6 @@ package chapter03_5;
 public class MultiArrayTest02 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		String str[][] = new String[4][];
 		str[0] = new String[2];

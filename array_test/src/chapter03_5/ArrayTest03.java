@@ -3,7 +3,6 @@ package chapter03_5;
 public class ArrayTest03 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		int intArr[] = {10, 7, 8, 45, 52, 13, 25, 1, 103, 4, 232, 141};
 		

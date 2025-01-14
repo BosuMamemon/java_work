@@ -3,7 +3,6 @@ package chapter03_5;
 public class ArrayTest01 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 //		int intArr[]; // 배열 선언: '스택'이라는 메모리 공간에 정수형 배열을 위한 4바이트 공간을 하나 만듬.
 //		intArr = new int[10]; // 초기화

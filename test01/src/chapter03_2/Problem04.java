@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Problem04 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("서로 다른 숫자 3개를 입력하면 가장 큰 값을 출력합니다.");

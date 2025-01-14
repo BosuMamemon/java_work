@@ -3,7 +3,6 @@ package chapter03_4;
 public class ForTest03 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 //		아스테리크로 정사각형 찍기
 		for(int i=0; i<10; i++) {

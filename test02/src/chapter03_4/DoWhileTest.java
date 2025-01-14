@@ -3,7 +3,6 @@ package chapter03_4;
 public class DoWhileTest {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		int num = 11;
 		int sum = 0;

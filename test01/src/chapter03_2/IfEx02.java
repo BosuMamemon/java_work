@@ -3,7 +3,6 @@ package chapter03_2;
 public class IfEx02 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		int score=80;
 		

@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class ExProblem01 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		Scanner sc = new Scanner(System.in);
 //		System.out.println("소문자를 입력하면 대문자로 변환합니다.");

@@ -3,7 +3,6 @@ package chapter03_4;
 public class ContunueTest {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		int sum = 0;
 		

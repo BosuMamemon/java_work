@@ -3,7 +3,6 @@ package chapter02;
 public class BinaryTest01 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		int num=10;
 		int number=8;
 		int binaryNumber=0b1010; // 아래 명령어들이 주석처리가 되면 여기 메모리는 가비지가 됨.

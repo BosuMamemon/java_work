@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class ExProblem01 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("첫번째 숫자, 연산자, 두번째 숫자를 스페이스바로 구분하여 값을 얻고자 하는 식을 적어주세요.");

@@ -3,7 +3,6 @@ package chapter02;
 public class TypeCastingEx {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		byte b = 3;
 		int num = b;

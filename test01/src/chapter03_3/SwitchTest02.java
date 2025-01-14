@@ -3,7 +3,6 @@ package chapter03_3;
 public class SwitchTest02 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		int score = 89;
 		char grade;

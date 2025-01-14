@@ -3,7 +3,6 @@ package chapter03_3;
 public class SwitchTest {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		int rank = 1;
 		char color;
