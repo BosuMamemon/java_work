@@ -9,21 +9,12 @@ package homework_3rd;
 // 메인함수는 주어진 3가지 생성자를 모두 사용하여 다음과 같은 결과가 나오도록 작성한다.
 
 class Book {
+	
 //	필드
 	private String title;
 	private String author;
 	private String publisher;
 	private String sort;
-	
-//	setter, getter
-	public void setTitle(String title) {this.title = title;}
-	public void setAuthor(String author) {this.author = author;}
-	public void setPublisher(String publisher) {this.publisher = publisher;}
-	public void setSort(String sort) {this.sort = sort;}
-	public String getTitle() { return title;}
-	public String getAuthor() {return author;}
-	public String getPublisher() {return publisher;}
-	public String getSort() {return sort;}
 	
 //	생성자
 	public Book() {}
@@ -38,9 +29,21 @@ class Book {
 		super();
 		this.title = title;
 	}
+	
+//	getter, setter
+	public String getTitle() { return title;}
+	public String getAuthor() {return author;}
+	public String getPublisher() {return publisher;}
+	public String getSort() {return sort;}
+	public void setTitle(String title) {this.title = title;}
+	public void setAuthor(String author) {this.author = author;}
+	public void setPublisher(String publisher) {this.publisher = publisher;}
+	public void setSort(String sort) {this.sort = sort;}
+	
 }
 
 public class Ex06 {
+	
 //	메인 메소드
 	public static void main(String[] args) {
 //		객체 생성
@@ -54,4 +57,5 @@ public class Ex06 {
 		System.out.printf("%-12s%-13s%-14s%s%n", book2.getTitle(), book2.getAuthor(), book2.getPublisher(), book2.getSort());
 		System.out.printf("%-13s%-14s%-15s%s%n", book3.getTitle(), book3.getAuthor(), book3.getPublisher(), book3.getSort());
 	}
+	
 }

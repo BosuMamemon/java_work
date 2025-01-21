@@ -18,6 +18,7 @@ class BankAccount {
 	private int accountNumber;
 	private String owner;
 	private int balance;
+	
 //	생성자
 	public BankAccount() {
 		super(); 
@@ -28,8 +29,8 @@ class BankAccount {
 		this.owner = owner;
 		this.balance = balance;
 	}
-//	메소드
-//		getter, setter
+	
+//	getter, setter
 	public int getAccountNumber() {
 		return accountNumber;
 	}
@@ -45,19 +46,21 @@ class BankAccount {
 	public void setBalance(int balance) {
 		this.balance = balance;
 	}
-//		입금(deposit)
+	
+//	메소드
+//	.입금(deposit)
 	public void deposit(int deposit) {
 		this.balance += deposit;
 	}
-//		출금(withdraw)
+//	.출금(withdraw)
 	public void withdraw(int withdraw) {
 		this.balance -= withdraw;
 	}
-//		잔액조회(getBalance)(getter)
+//	.잔액조회(getBalance)(getter)
 	public int getBalance() {
 		return balance;
 	}
-//		계좌이체(transfer)
+//	.계좌이체(transfer)
 	public int transfer(int amount, BankAccount otherAccount) {
 		this.balance -= amount;
 		otherAccount.balance += amount;
@@ -67,19 +70,22 @@ class BankAccount {
 }
 
 public class Ex07 {
+	
 //	메인 메소드
 	public static void main(String[] args) {
 //		계좌 생성
 		BankAccount a = new BankAccount(1, "a", 10000);
 		BankAccount b = new BankAccount(2, "b", 0);
+		
 //		메소드 테스트
 		a.deposit(10000);
 		System.out.println(a.getBalance());
-		
+
 		a.withdraw(5000);
 		System.out.println(a.getBalance());
 		
 		System.out.println(a.transfer(10000, b));
 		System.out.println(b.getBalance());
 	}
+	
 }
