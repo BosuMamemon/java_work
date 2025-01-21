@@ -4,7 +4,8 @@ package homework_3rd;
 // (1) 
 class Point {
 	private int x, y; 
-	public void Point(int x, int y) { 
+	public Point(int x, int y) { 
+//		생성자이므로 리턴 타입을 지워준다.
 		this.x = x; 
 		this.y = y;
 //			필드와 매개변수의 차이를 명확하게 하기 위해 this를 쓴다.
