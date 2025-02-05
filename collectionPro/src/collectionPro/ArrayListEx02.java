@@ -27,6 +27,8 @@ public class ArrayListEx02 {
 				longIdx = a.indexOf(i);
 		System.out.println(a.get(longIdx));
 		
+		
+		sc.close();
 	}
 
 }
