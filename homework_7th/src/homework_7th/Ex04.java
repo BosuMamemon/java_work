@@ -5,6 +5,9 @@ package homework_7th;
 //	그리고 다음 결과와 같이 랜덤하게 사용자에게 문제를 던진다.
 //	벡터 내에 정답이 아닌 단어를 랜덤하게 3개 선택하고 정답과 함께 4개의 보기를 출력한다.
 
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Random;
 import java.util.Scanner;
 import java.util.Vector;
 
@@ -44,6 +47,7 @@ public class Ex04 {
 //		객체 등 선언 및 생성
 		Scanner scanner = new Scanner(System.in);
 		Vector<Word> words = new Vector<>();
+		Random random = new Random();
 		
 //		벡터 값 삽입
 		words.add(new Word("dark", "어두운"));
@@ -81,8 +85,53 @@ public class Ex04 {
 		System.out.println("***** 영어 단어 테스트 프로그램 *****");
 		
 		while(true) {
+			System.out.println("\n현재 " + words.size() + "개의 단어가 들어있습니다.");
 			System.out.print("1. 단어 테스트 / 2. 단어 삽입 / 3. 종료 >> ");
 			int input = scanner.nextInt();
+			
+//			단어 테스트
+			if(input == 1) {
+				System.out.println("'-1'을 입력하면 테스트를 종료합니다.");
+				while(true) {
+//					정답 세팅
+					int answerIndex = random.nextInt(words.size());
+					Word answerWord = words.get(answerIndex);
+//					랜덤 선택지 HashSet 만들기(중복값 방지를 위함)
+					System.out.println(answerWord.getEng() + "?");
+					HashSet<Word> optionSet = new HashSet<>();
+					optionSet.add(answerWord);
+					while(optionSet.size() < 4) {
+						optionSet.add(words.get(random.nextInt(words.size())));
+					}
+//					선택지 Vector로 바꾸고 무작위 출력하기
+					Vector<Word> options = new Vector<>(optionSet);
+					Collections.shuffle(options);
+					for(int i = 0; i < 4; i++)
+						System.out.print("(" + (i + 1) + ") " + options.get(i).getKor() + " ");
+					System.out.print(" >> ");
+					int userAnswer = scanner.nextInt();
+//					정답 대조
+					if(userAnswer == -1) {
+						System.out.println("영어단어 테스트를 종료합니다.\n");
+						break;
+					} else if(options.get(userAnswer - 1).getEng().equals(answerWord.getEng()))
+						System.out.println("Excellent!!\n");
+					else
+						System.out.println("No!!\n");
+				}
+			}
+			
+//			단어 삽입
+			if(input == 2) {
+				System.out.println("\n영어 단어에 '그만'을 입력하면 입력을 종료합니다.");
+				while(true) {
+					System.out.print("영단어 한글단어 입력 >> ");
+					String putter = scanner.next();
+					if(putter.equals("그만")) break;
+					String putterKor = scanner.next();
+					words.add(new Word(putter, putterKor));
+				}
+			}
 			if(input == 3) break;
 		}
 		
