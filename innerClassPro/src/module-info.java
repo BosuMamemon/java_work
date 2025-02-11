@@ -4,6 +4,6 @@
 /**
  * 
  */
-module homework_6th {
+module innerClassPro {
 	requires java.sql;
 }
