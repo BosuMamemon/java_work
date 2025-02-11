@@ -18,6 +18,8 @@ public class ByteIOEx {
 			while((c = fIn.read(buffer)) != -1) {
 				fOut.write(buffer, 0, c);
 			}
+			fIn.close();
+			fOut.close();
 		} catch (Exception e) {
 			System.out.println("오류");
 			e.printStackTrace();

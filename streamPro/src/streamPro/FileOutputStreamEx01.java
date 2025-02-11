@@ -29,6 +29,7 @@ public class FileOutputStreamEx01 {
 			for(int i = 0; i < n; i++)
 				System.out.print(b2[i] + " ");
 			System.out.println();
+			fIn.close();
 		} catch (Exception e) {
 			System.out.println("오류");
 			e.printStackTrace();
